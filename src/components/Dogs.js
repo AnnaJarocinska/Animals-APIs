@@ -23,7 +23,7 @@ componentDidMount(){
     render() { 
         return (
             <div>
-           <img src= {this.state.dogs}></img>
+           <img src= {this.state.dogs} alt="dog"></img>
             </div>
           );
     }

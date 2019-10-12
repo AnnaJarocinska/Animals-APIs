@@ -27,7 +27,7 @@ class Cats extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.cats}></img>
+                <img src={this.state.cats} alt='cat'></img>
             </div>
         );
     }

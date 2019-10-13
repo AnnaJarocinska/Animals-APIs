@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ImageFrame from '../components/ImageFrame';
 
 class Dogs extends Component {
     constructor(props) {
@@ -22,9 +23,9 @@ componentDidMount(){
 
     render() { 
         return (
-            <div>
-           <img src= {this.state.dogs} alt="dog"></img>
-            </div>
+            <ImageFrame>
+           <img src= {this.state.dogs} alt="dog" className="imageFrame__image"></img>
+            </ImageFrame>
           );
     }
 }

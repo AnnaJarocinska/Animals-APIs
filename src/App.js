@@ -17,17 +17,17 @@ function App() {
       <Navigation/>
       <div>
       <Switch>
-        <Route path="/Dogs">
+      <Route path="/"exact>
+          <Home/>
+        </Route>
+        <Route path="/Dog">
           <Dogs/>
         </Route>
-        <Route path="/Cats">
+        <Route path="/Cat">
           <Cats/>
         </Route>
-        <Route path="/Foxes">
+        <Route path="/Fox">
           <Foxes/>
-        </Route>
-        <Route path="/">
-          <Home/>
         </Route>
       </Switch>
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ImageFrame from './ImageFrame';
 import $ from 'jquery';
 
 
@@ -16,15 +17,14 @@ class Foxes extends Component {
             url: "https://pixabay.com/api/?key=13903825-3372c5bc650dcd1a23337cc95&q=" + encodeURIComponent('fox'),
             dataType: "json"
         })
-            .done(res => this.setState({ foxes: res.hits[1].largeImageURL }))
-
+            .done(res => this.setState({ foxes: res.hits[(Math.floor(Math.random()*10))].largeImageURL }));
 
     }
     render() {
         return (
-            <div>
-                <img src={this.state.foxes} alt="fox"></img>
-            </div>
+                <ImageFrame>
+                <img src={this.state.foxes} alt="fox" className="imageFrame__image"></img>
+                </ImageFrame>
         );
     }
 }

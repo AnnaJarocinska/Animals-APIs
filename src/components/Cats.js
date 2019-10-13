@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import ImageFrame from './ImageFrame';
+
 const axios = require('axios');
+
 
 class Cats extends Component {
     constructor(props) {
@@ -26,9 +29,9 @@ class Cats extends Component {
 
     render() {
         return (
-            <div>
-                <img src={this.state.cats} alt='cat'></img>
-            </div>
+                 <ImageFrame>
+                <img src={this.state.cats} alt='cat'className="imageFrame__image"></img>
+                </ImageFrame>
         );
     }
 }
